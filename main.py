@@ -45,8 +45,6 @@ if __name__ == '__main__':
             print(f"Sry that \"{post_title}\" is wordpress's native format which is not supported at present.")
             continue
         content = html2md.work_from_html_to_md(post_content)
-        if content == "":
-            continue
         tag_content = set_tag(term_to_post_dic[post_id], term_dic)
         meta_data = f"""---
 layout: Post
